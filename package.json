@@ -5,7 +5,8 @@
   "author": "Christopher Lillthors",
   "license": "MIT",
   "scripts": {
-    "start": "node src"
+    "start": "nodemon --watch src",
+    "production": "node src"
   },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
@@ -14,5 +15,7 @@
     "koa": "2",
     "koa-router": "next"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }
