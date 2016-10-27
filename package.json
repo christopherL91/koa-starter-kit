@@ -1,0 +1,18 @@
+{
+  "name": "koa-starter-kit",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Christopher Lillthors",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "koa": "2",
+    "koa-router": "next"
+  },
+  "devDependencies": {}
+}
