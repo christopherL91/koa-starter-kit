@@ -6,16 +6,20 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --watch src",
+    "test": "ava",
     "production": "node src"
   },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
     "babel-preset-latest": "^6.16.0",
     "babel-register": "^6.18.0",
+    "concurrency-logger": "^2.0.1",
     "koa": "2",
+    "koa-convert": "^1.2.0",
     "koa-router": "next"
   },
   "devDependencies": {
+    "ava": "^0.16.0",
     "nodemon": "^1.11.0"
   }
 }
