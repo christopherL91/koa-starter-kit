@@ -1,5 +1,7 @@
 'use strict';
 
+import chalk from 'chalk';
+
 import App from './app.js';
 
 const {
@@ -12,10 +14,10 @@ const addr = `${BIND}:${PORT}`;
 //  Pass data to routes
 const config = {};
 
-const app = App(config);
+const server = App(config);
 
-//  app.context.db = createDB_Client();
-
-app.listen({port: PORT, host: BIND}, () => {
-    console.log(`Server started on ${addr}`);
+server.listen({port: PORT, host: BIND}, () => {
+    const format = chalk.blue;
+    const msg = `[Server]: Started on ${addr}`;
+    console.log(`${format(msg)}`);
 });

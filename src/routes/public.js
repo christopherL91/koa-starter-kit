@@ -10,5 +10,10 @@ export default (config) => {
             msg: 'Hello from public router'
         };
     });
+
+    router.post('/', async (ctx) => {
+        console.log(ctx.request.body);
+    });
+
     return router;
 };
