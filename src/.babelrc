@@ -1,1 +1,10 @@
-{ "presets": ["latest"] }
+{
+    "presets": [
+        ["env", {
+            "targets": {
+                "node": "current"
+            },
+            "useBuiltIns": true
+        }]
+    ]
+}
