@@ -22,8 +22,12 @@ export default (config) => {
         const response = await remoteExec(values.username, password);
         // TODO: Check response.returnCode for error and act accordingly.
         // @rstenbo
-        await db.connection.oneOrNone(db.schemaQuery, values.schema)
-        .then(() => db.connection.oneOrNone(db.userQuery, {username: values.username, password}));
+        await db.connection.task(t=> {
+            return t.batch([
+                t.oneOrNone(db.schemaQuery, values.schema),
+                t.oneOrNone(db.userQuery, {username: values.username, password}))
+            ]);
+        });
         const encodedSecretName = Buffer.from(values.secretName).toString('base64');
         const encodedPassword = Buffer.from(password).toString('base64');
 
