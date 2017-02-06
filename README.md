@@ -1,12 +1,23 @@
-#   Koa-starter-kit
+#   Advinans-Bouncer
 
 ##  Installation
 
 ```bash
 
     $ yarn
-    $ yarn run start
+    $ yarn start
 
 ```
 
-License: MIT
+## Example
+
+*POST /*
+
+```javascript
+
+{
+	"username": "christopher",
+	"schema": "foo",
+	"secretName": "bar"
+}
+```
